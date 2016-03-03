@@ -30,7 +30,8 @@ import org.elasticsearch.env.Environment;
 import org.elasticsearch.index.Index;
 import org.elasticsearch.index.analysis.AbstractIndexAnalyzerProvider;
 import org.elasticsearch.index.analysis.Analysis;
-import org.elasticsearch.index.settings.IndexSettings;
+import org.elasticsearch.index.settings.IndexSettingsService;
+
 
 import java.util.Set;
 
@@ -41,8 +42,8 @@ public class MorfologikAnalyzerProvider extends AbstractIndexAnalyzerProvider<Mo
     private final MorfologikAnalyzer analyzer;
 
     @Inject
-    public MorfologikAnalyzerProvider(Index index, @IndexSettings Settings indexSettings, Environment env, @Assisted String name, @Assisted Settings settings) {
-        super(index, indexSettings, name, settings);
+    public MorfologikAnalyzerProvider(Index index, IndexSettingsService indexSettingsService, Environment env, @Assisted String name, @Assisted Settings settings) {
+        super(index, indexSettingsService.getSettings(), name, settings);
         analyzer = new MorfologikAnalyzer();
     }
 
