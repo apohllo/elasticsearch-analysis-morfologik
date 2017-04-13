@@ -5,7 +5,7 @@
     <groupId>com.github.chytreg</groupId>
     <artifactId>elasticsearch-analysis-morfologik</artifactId>
     <name>elasticsearch-analysis-morfologik</name>
-    <version>2.3.2</version>
+    <version>5.1.1</version>
     <description>Morfologik (Polish) Analysis for ElasticSearch</description>
     <licenses>
         <license>
@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.elasticsearch.plugin</groupId>
         <artifactId>plugins</artifactId>
-        <version>2.4.2</version>
+        <version>5.1.1</version>
     </parent>
     <properties>
         <elasticsearch.version>2.4.2</elasticsearch.version>
